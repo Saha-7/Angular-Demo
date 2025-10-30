@@ -8,9 +8,17 @@ import { Home } from './home/home';
   imports: [RouterOutlet, Header, Home],
   template: `
     <app-header/>
-    <app-home/>
+    <main>
+      <app-home />
+    </main>
   `,
-  styles: [],
+  styles: [
+    `
+    main{
+      padding: 16px;
+    }
+    `
+  ],
 })
 export class App {
   protected readonly title = signal('first-ng-app');
